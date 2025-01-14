@@ -7,14 +7,21 @@
     <link rel="stylesheet" href="building-styles.css">
 </head>
 <body>
-    <div id="toolbox">
-        <!-- Add draggable elements here -->
-    </div>
-    <div id="canvas"></div>
-    <div id="controls">
-        <p>Total Price: $<span id="totalPrice">0</span></p>
-        <button id="saveProject">Save Project</button>
-        <button id="viewHouse">View House</button>
+    <div id="layout">
+        <div id="toolbox">
+            <!-- Add draggable elements here -->
+        </div>
+        <div id="main-area">
+            <div id="top-bar">
+                <h1>Building Studio</h1>
+                <p id="price-display">Total Price: $<span id="totalPrice">0</span></p>
+            </div>
+            <div id="canvas"></div>
+            <div id="controls">
+                <button id="saveProject">Save Project</button>
+                <button id="viewHouse">View House</button>
+            </div>
+        </div>
     </div>
     <script src="building-script.js"></script>
 </body>

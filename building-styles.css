@@ -1,19 +1,96 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial, sans-serif;
+}
+
+#layout {
+    display: flex;
+    height: 100vh;
+}
+
 #toolbox {
     width: 200px;
-    height: 100vh;
-    float: left;
+    height: 100%;
     background-color: #f0f0f0;
     padding: 10px;
+    overflow-y: auto;
+}
+
+#main-area {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+#top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #e0e0e0;
+}
+
+#price-display {
+    font-weight: bold;
 }
 
 #canvas {
-    margin-left: 220px;
-    height: 80vh;
+    flex-grow: 1;
     border: 2px solid #000;
+    margin: 10px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 100px);
+    grid-template-rows: repeat(auto-fill, 100px);
+    gap: 2px;
+    background-color: #f0f0f0;
+    overflow: auto;
 }
 
 #controls {
-    clear: both;
+    display: flex;
+    justify-content: space-around;
     padding: 10px;
+    background-color: #e0e0e0;
+}
+
+.draggable {
+    width: 100px;
+    height: 100px;
+    background-color: #ffffff;
+    border: 2px solid #333;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    cursor: move;
+    font-weight: bold;
+    user-select: none;
+}
+
+#toolbox .draggable {
+    margin-bottom: 10px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.delete-menu {
+    position: fixed;
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: 5px 10px;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+.delete-menu:hover {
     background-color: #f0f0f0;
 }
