@@ -1,0 +1,17 @@
+#houseImage {
+    width: 80%;
+    height: 80vh;
+    margin: 0 auto;
+    background-image: url('house_img/web_cottage.jpeg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#backToBuilding {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+}

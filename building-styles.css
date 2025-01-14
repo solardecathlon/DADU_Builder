@@ -1,0 +1,19 @@
+#toolbox {
+    width: 200px;
+    height: 100vh;
+    float: left;
+    background-color: #f0f0f0;
+    padding: 10px;
+}
+
+#canvas {
+    margin-left: 220px;
+    height: 80vh;
+    border: 2px solid #000;
+}
+
+#controls {
+    clear: both;
+    padding: 10px;
+    background-color: #f0f0f0;
+}
