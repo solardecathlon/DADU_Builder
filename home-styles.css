@@ -1,39 +1,107 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
+:root {
+    --mocha-mousse: #A3785E;
+    --white: #FFFFFF;
 }
 
-header {
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    scroll-behavior: smooth;
+}
+
+.header {
+    background-color: var(--white);
+    padding: 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem;
-    background-color: #f0f0f0;
+    position: fixed;
+    width: 100%;
+    top: 0; /* Start at the top of the page */
+    transition: top 0.3s;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    z-index: 1000; /* Ensure it's above all other elements */
 }
 
-.hero {
-    height: 100vh;
+.main-content {
+    padding-top: 80px; /* Adjust this value based on the height of your header */
+}
+
+.logo {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
     align-items: center;
-    text-align: center;
-    background-image: url('house_img/web_cottage.jpeg');
-    background-size: cover;
-    background-position: center;
-    color: white;
 }
 
-button {
+.logo img {
+    height: 1em; /* Match the font size of the title */
+    width: auto; /* Maintain aspect ratio */
+    margin-right: 10px;
+    filter: brightness(0) saturate(100%) invert(45%) sepia(19%) saturate(1071%) hue-rotate(338deg) brightness(91%) contrast(84%);
+    /* This filter changes the logo color to match --mocha-mousse */
+}
+
+.logo h1 {
+    font-size: 24px;
+    color: var(--mocha-mousse);
+    margin: 0;
+    line-height: 1;
+}
+
+
+.header-buttons button {
+    margin-left: 10px;
     padding: 10px 20px;
-    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
     cursor: pointer;
 }
 
-#startDesigning {
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    margin-top: 20px;
+.sign-button {
+    background-color: var(--white);
+    color: var(--mocha-mousse);
+    border: 2px solid var(--mocha-mousse) !important;
+}
+
+.build-button {
+    background-color: var(--mocha-mousse);
+    color: var(--white);
+}
+
+.main-content {
+    padding-top: 100px;
+}
+
+.hero {
+    background-color: var(--mocha-mousse);
+    padding: 100px 0;
+    text-align: center;
+}
+
+.hero img {
+    max-width: 60%;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.2);
+}
+
+.description {
+    max-width: 800px;
+    margin: 50px auto;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.description h2 {
+    color: var(--mocha-mousse);
+}
+
+.video-section {
+    text-align: center;
+    padding: 50px 0;
+    background-color: #f0f0f0;
+}
+
+.video-section video {
+    max-width: 80%;
+    border-radius: 10px;
 }

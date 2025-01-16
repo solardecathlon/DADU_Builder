@@ -3,24 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home Design Studio</title>
+    <title>Backyard Cottage Design Studio</title>
     <link rel="stylesheet" href="home-styles.css">
 </head>
 <body>
-    <header>
-        <h1>Home Design Studio</h1>
-        <nav>
-            <button id="signIn">Sign In</button>
-            <button id="signUp">Sign Up</button>
-        </nav>
-    </header>
-    <main>
-        <div class="hero">
-            <h2>Design Your Dream Home</h2>
-            <p>Create, visualize, and price your perfect living space with our interactive tools.</p>
-            <button id="startDesigning">Start Designing</button>
+    <header class="header" id="header">
+        <div class="logo">
+            <img src="house_img/logo.png" alt="Backyard Cottage Logo">
+            <h1>Backyard Cottage Design Studio</h1>
         </div>
+        <div class="header-buttons">
+            <button id="sign-button">Sign In / Sign Up</button>
+            <button id="build-button">Build</button>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <section class="hero">
+            <img src="house_img/web_cottage.jpeg" alt="Backyard Cottage">
+        </section>
+
+        <section class="description">
+            <h2>Design Your Dream Backyard Cottage</h2>
+            <p>Welcome to Backyard Cottage Design Studio, where we turn your backyard dreams into reality. Our innovative platform allows you to design, visualize, and plan your perfect backyard cottage with ease. Whether you're looking for a guest house, home office, or personal retreat, we've got you covered.</p>
+            <button id="build-button">Start Building Now</button>
+        </section>
+
+        <section class="video-section">
+            <video width="320" height="240" controls>
+                <source src="cottage-video.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </section>
     </main>
+
     <script src="home-script.js"></script>
 </body>
 </html>
